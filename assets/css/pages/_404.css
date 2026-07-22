@@ -1,0 +1,48 @@
+/* ==========================================================================
+   PÁGINA 404 — coherente con la identidad, invita a regresar
+   ========================================================================== */
+
+.error-page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.error-page__mark {
+  width: 64px;
+  height: auto;
+  color: var(--accent-500);
+  opacity: 0.9;
+  animation: hero-mark-float 7s var(--ease-in-out) infinite;
+}
+
+.error-page__code {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.error-page h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+.error-page p {
+  max-width: 42ch;
+}
+
+.error-page__actions {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  flex-wrap: wrap;
+  justify-content: center;
+}

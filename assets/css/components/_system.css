@@ -1,0 +1,169 @@
+/* ==========================================================================
+   CURSOR / LOADER / INDICADOR DE PROGRESO (elemento firma)
+   ========================================================================== */
+
+/* ---- Cursor personalizado — reacciones sutiles, nunca exageradas ---- */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-cursor);
+  pointer-events: none;
+  border-radius: var(--radius-full);
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-500);
+  opacity: 0;
+}
+
+.cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border-strong);
+  opacity: 0;
+  transition: width var(--dur-fast) var(--ease-out), height var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), opacity var(--dur-fast) var(--ease-out);
+}
+
+html.cursor-ready .cursor-dot,
+html.cursor-ready .cursor-ring {
+  opacity: 1;
+}
+
+html.cursor-ready.cursor-hover .cursor-ring {
+  width: 54px;
+  height: 54px;
+  border-color: var(--accent-500);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+/* ---- Loader inicial — el isotipo participa ---- */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-loader);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-0);
+  transition: opacity var(--dur-slow) var(--ease-soft), visibility var(--dur-slow) var(--ease-soft);
+}
+
+.loader__mark {
+  width: 52px;
+  height: auto;
+  color: var(--accent-500);
+  animation: loader-breathe 1.6s var(--ease-in-out) infinite;
+}
+
+.loader__mark path {
+  transform-origin: center;
+}
+
+.loader__mark path:first-child {
+  animation: loader-float-top 1.6s var(--ease-in-out) infinite;
+}
+
+.loader__mark path:last-child {
+  animation: loader-float-bottom 1.6s var(--ease-in-out) infinite;
+}
+
+@keyframes loader-breathe {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+@keyframes loader-float-top {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes loader-float-bottom {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(2px); }
+}
+
+html.is-loaded .loader {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ---- Indicador de progreso de scroll — reutiliza la geometría del isotipo ---- */
+.scroll-progress {
+  position: fixed;
+  right: var(--space-5);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: var(--z-nav);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-soft);
+}
+
+html.is-loaded .scroll-progress {
+  opacity: 1;
+}
+
+.scroll-progress__track {
+  position: relative;
+  width: 1px;
+  height: 120px;
+  background: var(--border-hairline);
+}
+
+.scroll-progress__fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--accent-500);
+  transition: height 60ms linear;
+}
+
+.scroll-progress__mark {
+  width: 12px;
+  height: auto;
+  color: var(--accent-500);
+}
+
+@media (max-width: 860px) {
+  .scroll-progress {
+    display: none;
+  }
+}
+
+/* ---- Glow ambiental que sigue al cursor en el Hero ---- */
+.ambient-glow {
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.16), transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: opacity var(--dur-slow) var(--ease-soft);
+  will-change: transform;
+}
+
+/* ---- Separadores sin líneas — luz y espacio ---- */
+.divider-glow {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--border-strong) 50%, transparent);
+}

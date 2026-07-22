@@ -1,0 +1,98 @@
+/* ==========================================================================
+   TIPOGRAFÍA — jerarquía editorial
+   ========================================================================== */
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: clamp(var(--fs-3xl), 8vw, var(--fs-4xl));
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, var(--fs-2xl));
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+}
+
+h3, .h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, var(--fs-xl));
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+}
+
+h4, .h4 {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+}
+
+.lead {
+  font-size: clamp(var(--fs-base), 2vw, var(--fs-md));
+  line-height: var(--lh-relaxed);
+  color: var(--text-secondary);
+  font-weight: var(--fw-regular);
+}
+
+p {
+  line-height: var(--lh-relaxed);
+  color: var(--text-secondary);
+}
+
+strong, b {
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--accent-fg);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--accent-500);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.18);
+  flex-shrink: 0;
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+  letter-spacing: var(--ls-normal);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, var(--text-primary) 55%, var(--accent-500) 130%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

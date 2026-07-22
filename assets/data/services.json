@@ -1,0 +1,41 @@
+{
+  "$schema": "Espejo estructurado del contenido de servicios. La fuente visible vive en index.html (HTML semántico, indexable por buscadores sin depender de JavaScript). Este archivo se mantiene sincronizado para una futura migración a un sistema de gestión de contenido.",
+  "items": [
+    {
+      "id": "product-design",
+      "title": "Diseño de producto digital",
+      "description": "Interfaces pensadas desde la psicología del usuario hasta el último píxel. No decoramos pantallas: diseñamos decisiones.",
+      "outcome": "Productos que los equipos comerciales pueden vender solo con enseñarlos."
+    },
+    {
+      "id": "engineering",
+      "title": "Ingeniería de software",
+      "description": "Arquitecturas escalables, código mantenible y rendimiento medido, no supuesto. Construimos para durar años, no para el próximo sprint.",
+      "outcome": "Una base técnica que crece con el negocio sin reescrituras costosas."
+    },
+    {
+      "id": "brand-systems",
+      "title": "Sistemas de marca",
+      "description": "Identidades visuales con reglas claras: tipografía, color, movimiento y tono, coherentes en cada punto de contacto.",
+      "outcome": "Una marca reconocible incluso sin el logotipo delante."
+    },
+    {
+      "id": "motion",
+      "title": "Motion & interacción",
+      "description": "Animación con propósito: cada transición explica algo, cada microinteracción confirma una acción.",
+      "outcome": "Una experiencia que se siente premium sin necesitar explicación."
+    },
+    {
+      "id": "performance-seo",
+      "title": "Rendimiento y SEO técnico",
+      "description": "Core Web Vitals, accesibilidad WCAG y arquitectura semántica desde el primer commit, no como parche final.",
+      "outcome": "Velocidad y visibilidad que se traducen directamente en resultados de negocio."
+    },
+    {
+      "id": "product-strategy",
+      "title": "Estrategia de producto",
+      "description": "Antes de diseñar o programar, entendemos el problema real del negocio y del usuario que lo va a resolver.",
+      "outcome": "Decisiones de producto con criterio, no por intuición."
+    }
+  ]
+}

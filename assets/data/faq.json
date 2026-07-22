@@ -1,0 +1,5 @@
+{
+  "$schema": "Estructura preparada para una futura sección de preguntas frecuentes. No se renderiza todavía en el sitio.",
+  "fields": ["id", "question", "answer"],
+  "items": []
+}

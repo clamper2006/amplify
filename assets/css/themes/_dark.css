@@ -1,0 +1,21 @@
+/* ==========================================================================
+   AJUSTES ESPECÍFICOS — TEMA OSCURO
+   ========================================================================== */
+
+[data-theme='dark'] .hero-visual__canvas {
+  opacity: 0.85;
+  mix-blend-mode: screen;
+}
+
+[data-theme='dark'] .ambient-glow {
+  opacity: 1;
+}
+
+[data-theme='dark'] .noise-overlay {
+  opacity: 0.04;
+}
+
+[data-theme='dark'] .card,
+[data-theme='dark'] .empty-state {
+  background: var(--surface-raised);
+}
