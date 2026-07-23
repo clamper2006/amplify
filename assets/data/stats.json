@@ -1,5 +1,0 @@
-{
-  "$schema": "Estructura preparada para estadísticas reales de AMPLIFY (clientes, proyectos, horas, países). No se renderiza todavía: mostrar métricas en cero transmitiría lo contrario de confianza.",
-  "fields": ["id", "label", "value", "suffix"],
-  "items": []
-}

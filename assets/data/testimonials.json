@@ -1,5 +1,0 @@
-{
-  "$schema": "Estructura prevista para testimonios reales de clientes de AMPLIFY. No contiene datos ficticios.",
-  "fields": ["id", "name", "role", "company", "avatar", "quote", "rating"],
-  "items": []
-}
