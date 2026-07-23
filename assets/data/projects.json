@@ -1,0 +1,9 @@
+{
+  "$schema": "Estructura prevista para cada proyecto futuro de AMPLIFY. No contiene datos ficticios.",
+  "fields": [
+    "id", "name", "client", "industry", "year", "duration",
+    "coverImage", "gallery", "description", "goals", "problem",
+    "process", "solution", "technologies", "results", "url", "status"
+  ],
+  "items": []
+}

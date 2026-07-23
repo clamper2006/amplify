@@ -1,0 +1,218 @@
+/* ==========================================================================
+   AMPLIFY — DESIGN TOKENS
+   Única fuente de verdad del sistema visual. Ningún componente debe
+   declarar un color, tamaño, sombra o duración fuera de este archivo.
+   ========================================================================== */
+
+:root {
+  /* -----------------------------------------------------------------------
+     COLOR — ESCALA NEUTRA (derivada de los assets reales de marca)
+     El wordmark de AMPLIFY usa #333333 sobre fondos claros y #E6E6E6
+     sobre fondos oscuros. Toda la escala tonal nace de esos dos valores.
+     ----------------------------------------------------------------------- */
+  --ink-950: #101012;
+  --ink-900: #17171a;
+  --ink-700: #333333; /* gris de marca — wordmark claro */
+  --ink-500: #6b6b73;
+  --ink-300: #767676;
+  --ink-150: #d8d8dc;
+  --ink-100: #eeeef0;
+  --ink-050: #f7f7f8;
+
+  --paper-950: #f9f9fa;
+  --paper-900: #f5f5f7;
+  --paper-700: #e6e6e6; /* gris de marca — wordmark oscuro */
+  --paper-500: #9a9aa4;
+  --paper-300: #7a7a7a;
+  --paper-150: #2a2a2e;
+  --paper-100: #1c1c1f;
+  --paper-050: #131315;
+
+  /* Acento — verde de marca extraído directamente del isotipo */
+  --accent-500: #3bf087;
+  --accent-600: #22d46e;
+  --accent-700: #16a857;
+  --accent-rgb: 59, 240, 135;
+
+  /* Variantes de accesibilidad: el verde de marca puro (#3BF087) no
+     alcanza 3:1 sobre blanco, así que en tema claro el texto y los
+     iconos que usan el acento se apoyan en estas variantes más oscuras
+     que conservan el matiz mientras cumplen WCAG AA. */
+  --accent-text-on-light: #0a843d; /* 4.79:1 sobre blanco — uso en texto */
+  --accent-icon-on-light: #0daa4f; /* 3.05:1 sobre blanco — uso en iconos/gráficos */
+
+  /* -----------------------------------------------------------------------
+     TIPOGRAFÍA
+     ----------------------------------------------------------------------- */
+  --font-display: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+
+  --fs-2xs: 0.6875rem;   /* 11px — eyebrows, badges */
+  --fs-xs: 0.8125rem;    /* 13px — captions */
+  --fs-sm: 0.9375rem;    /* 15px — small body */
+  --fs-base: 1.0625rem;  /* 17px — body */
+  --fs-md: 1.25rem;      /* 20px — lead */
+  --fs-lg: 1.75rem;      /* 28px — h4 */
+  --fs-xl: 2.5rem;       /* 40px — h3 */
+  --fs-2xl: 3.5rem;      /* 56px — h2 */
+  --fs-3xl: 5rem;        /* 80px — h1 desktop */
+  --fs-4xl: 6.5rem;      /* 104px — hero desktop */
+
+  --lh-tight: 1.05;
+  --lh-snug: 1.25;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  --ls-tight: -0.03em;
+  --ls-snug: -0.015em;
+  --ls-normal: 0;
+  --ls-wide: 0.08em;
+  --ls-wider: 0.16em;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* -----------------------------------------------------------------------
+     ESPACIADO — escala base 4px
+     ----------------------------------------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --space-11: 11rem;
+
+  --container-max: 1240px;
+  --container-narrow: 760px;
+  --container-pad: clamp(1.5rem, 5vw, 4rem);
+
+  /* -----------------------------------------------------------------------
+     RADIOS
+     ----------------------------------------------------------------------- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 999px;
+
+  /* -----------------------------------------------------------------------
+     SOMBRAS — extremadamente suaves, nunca protagonistas
+     ----------------------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(16, 16, 18, 0.04), 0 1px 1px rgba(16, 16, 18, 0.03);
+  --shadow-md: 0 8px 24px rgba(16, 16, 18, 0.06), 0 2px 6px rgba(16, 16, 18, 0.04);
+  --shadow-lg: 0 24px 64px rgba(16, 16, 18, 0.10), 0 4px 12px rgba(16, 16, 18, 0.05);
+  --shadow-glow: 0 0 0 1px rgba(var(--accent-rgb), 0.16), 0 0 32px rgba(var(--accent-rgb), 0.18);
+
+  /* -----------------------------------------------------------------------
+     MOVIMIENTO — curvas físicas, nunca lineales ni rebotadas
+     ----------------------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  --dur-instant: 120ms;
+  --dur-fast: 220ms;
+  --dur-base: 420ms;
+  --dur-slow: 720ms;
+  --dur-slower: 1100ms;
+
+  /* -----------------------------------------------------------------------
+     BLUR / GLASS
+     ----------------------------------------------------------------------- */
+  --glass-blur: 18px;
+  --z-nav: 100;
+  --z-cursor: 200;
+  --z-modal: 300;
+  --z-loader: 400;
+}
+
+/* ============================================================
+   TEMA CLARO (por defecto)
+   ============================================================ */
+:root,
+[data-theme='light'] {
+  --bg-0: #ffffff;
+  --bg-1: var(--ink-050);
+  --bg-2: var(--ink-100);
+
+  --text-primary: var(--ink-900);
+  --text-secondary: var(--ink-500);
+  --text-tertiary: var(--ink-300);
+  --text-on-accent: var(--ink-950);
+
+  --border-hairline: rgba(23, 23, 26, 0.08);
+  --border-strong: rgba(23, 23, 26, 0.14);
+
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.68);
+  --glass-border: rgba(23, 23, 26, 0.08);
+
+  /* Texto e iconos con color de acento, ajustados a contraste seguro */
+  --accent-fg: var(--accent-text-on-light);
+  --accent-icon: var(--accent-icon-on-light);
+
+  --scrollbar-track: var(--ink-050);
+  --scrollbar-thumb: var(--ink-150);
+
+  color-scheme: light;
+}
+
+/* ============================================================
+   TEMA OSCURO
+   ============================================================ */
+[data-theme='dark'] {
+  --bg-0: #0a0a0c;
+  --bg-1: var(--paper-050);
+  --bg-2: var(--paper-100);
+
+  --text-primary: var(--paper-900);
+  --text-secondary: var(--paper-500);
+  --text-tertiary: var(--paper-300);
+  --text-on-accent: var(--ink-950);
+
+  --border-hairline: rgba(245, 245, 247, 0.08);
+  --border-strong: rgba(245, 245, 247, 0.14);
+
+  --surface: var(--paper-050);
+  --surface-raised: var(--paper-100);
+  --glass-bg: rgba(19, 19, 21, 0.62);
+  --glass-border: rgba(245, 245, 247, 0.08);
+
+  /* En oscuro el verde de marca puro ya cumple contraste (13:1) */
+  --accent-fg: var(--accent-500);
+  --accent-icon: var(--accent-500);
+
+  --scrollbar-track: var(--paper-050);
+  --scrollbar-thumb: var(--paper-150);
+
+  color-scheme: dark;
+}
+
+/* Transición animada entre temas — nunca instantánea (Capítulo 3 / 7) */
+body,
+body * {
+  transition:
+    background-color var(--dur-slow) var(--ease-soft),
+    border-color var(--dur-slow) var(--ease-soft),
+    color var(--dur-base) var(--ease-soft),
+    box-shadow var(--dur-slow) var(--ease-soft),
+    opacity var(--dur-base) var(--ease-soft),
+    transform var(--dur-base) var(--ease-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  body * {
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

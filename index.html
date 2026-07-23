@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AMPLIFY — Diseño y desarrollo de software premium</title>
+<meta name="description" content="AMPLIFY es un estudio de diseño y desarrollo de software. Construimos productos digitales con el rigor de la ingeniería y el criterio del diseño de clase mundial.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://amplify.dev/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AMPLIFY">
+<meta property="og:title" content="AMPLIFY — Diseño y desarrollo de software premium">
+<meta property="og:description" content="Construimos productos digitales con el rigor de la ingeniería y el criterio del diseño de clase mundial.">
+<meta property="og:url" content="https://amplify.dev/">
+<meta property="og:image" content="https://amplify.dev/assets/images/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AMPLIFY — Diseño y desarrollo de software premium">
+<meta name="twitter:description" content="Construimos productos digitales con el rigor de la ingeniería y el criterio del diseño de clase mundial.">
+<meta name="twitter:image" content="https://amplify.dev/assets/images/og-cover.png">
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/icon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/icon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+
+<!-- Rendimiento: preconexión y precarga de recursos críticos -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="assets/css/base/_variables.css" as="style">
+<link rel="preload" href="assets/js/config/config.js" as="script">
+
+<!-- Tipografía: Space Grotesk (display) + Inter (cuerpo) + JetBrains Mono (técnica) -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<!-- Hoja de estilos — orden de cascada: base → layout → componentes → utilidades → temas → páginas -->
+<link rel="stylesheet" href="assets/css/base/_variables.css">
+<link rel="stylesheet" href="assets/css/base/_reset.css">
+<link rel="stylesheet" href="assets/css/base/_typography.css">
+<link rel="stylesheet" href="assets/css/layout/_grid.css">
+<link rel="stylesheet" href="assets/css/layout/_header.css">
+<link rel="stylesheet" href="assets/css/layout/_footer.css">
+<link rel="stylesheet" href="assets/css/components/_buttons.css">
+<link rel="stylesheet" href="assets/css/components/_cards.css">
+<link rel="stylesheet" href="assets/css/components/_inputs.css">
+<link rel="stylesheet" href="assets/css/components/_modal.css">
+<link rel="stylesheet" href="assets/css/components/_system.css">
+<link rel="stylesheet" href="assets/css/utilities/_utilities.css">
+<link rel="stylesheet" href="assets/css/themes/_light.css">
+<link rel="stylesheet" href="assets/css/themes/_dark.css">
+<link rel="stylesheet" href="assets/css/pages/_home.css">
+
+<!-- Datos estructurados -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "AMPLIFY",
+  "description": "Estudio de diseño y desarrollo de software premium.",
+  "url": "https://amplify.dev/",
+  "logo": "https://amplify.dev/assets/logos/amplify-lockup-light.png",
+  "image": "https://amplify.dev/assets/images/og-cover.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "hola@amplify.dev"
+  },
+  "sameAs": []
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<!-- ==================== LOADER ==================== -->
+<div class="loader" aria-hidden="true">
+  <svg class="loader__mark" viewBox="0 0 583 739" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(-1.073169,738.466123) scale(0.1,-0.1)" fill="currentColor">
+      <path d="M2877 7328 c-232 -328 -2068 -3313 -2477 -4028 -173 -303 -322 -598
+-360 -715 -31 -97 -32 -104 -27 -230 6 -145 12 -175 35 -175 33 0 634 375
+1382 862 l435 284 193 329 c418 716 719 1213 817 1351 45 62 48 64 65 49 49
+-45 255 -375 745 -1197 l309 -517 415 -269 c535 -347 1371 -883 1387 -889 15
+-6 29 142 29 302 0 96 -4 120 -29 190 -92 257 -344 694 -1164 2021 -928 1504
+-1663 2665 -1701 2688 -5 4 -30 -22 -54 -56z"/>
+      <path d="M2500 2988 c-613 -389 -2104 -1322 -2312 -1447 l-177 -106 0 -560 c0
+-516 7 -780 25 -849 l6 -26 64 35 c174 98 1221 763 2099 1334 390 254 715 459
+722 457 6 -3 313 -196 680 -429 1506 -956 2147 -1357 2168 -1357 53 0 65 158
+65 834 l0 561 -1428 893 c-785 491 -1440 901 -1457 911 l-30 18 -425 -269z"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ==================== CURSOR PERSONALIZADO ==================== -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ==================== TEXTURA / RUIDO AMBIENTAL ==================== -->
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ==================== INDICADOR DE PROGRESO (firma visual del isotipo) ==================== -->
+<div class="scroll-progress" aria-hidden="true">
+  <svg class="scroll-progress__mark" viewBox="0 0 583 739" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(-1.073169,738.466123) scale(0.1,-0.1)" fill="currentColor">
+      <path d="M2500 2988 c-613 -389 -2104 -1322 -2312 -1447 l-177 -106 0 -560 c0
+-516 7 -780 25 -849 l6 -26 64 35 c174 98 1221 763 2099 1334 390 254 715 459
+722 457 6 -3 313 -196 680 -429 1506 -956 2147 -1357 2168 -1357 53 0 65 158
+65 834 l0 561 -1428 893 c-785 491 -1440 901 -1457 911 l-30 18 -425 -269z"/>
+    </g>
+  </svg>
+  <div class="scroll-progress__track">
+    <div class="scroll-progress__fill" data-scroll-fill></div>
+  </div>
+</div>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar" data-navbar>
+  <div class="container navbar__inner">
+    <a href="#main" class="navbar__brand">
+      <svg class="logo-mark" viewBox="0 0 583 739" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g transform="translate(-1.073169,738.466123) scale(0.1,-0.1)" fill="currentColor">
+          <path d="M2877 7328 c-232 -328 -2068 -3313 -2477 -4028 -173 -303 -322 -598
+-360 -715 -31 -97 -32 -104 -27 -230 6 -145 12 -175 35 -175 33 0 634 375
+1382 862 l435 284 193 329 c418 716 719 1213 817 1351 45 62 48 64 65 49 49
+-45 255 -375 745 -1197 l309 -517 415 -269 c535 -347 1371 -883 1387 -889 15
+-6 29 142 29 302 0 96 -4 120 -29 190 -92 257 -344 694 -1164 2021 -928 1504
+-1663 2665 -1701 2688 -5 4 -30 -22 -54 -56z"/>
+          <path d="M2500 2988 c-613 -389 -2104 -1322 -2312 -1447 l-177 -106 0 -560 c0
+-516 7 -780 25 -849 l6 -26 64 35 c174 98 1221 763 2099 1334 390 254 715 459
+722 457 6 -3 313 -196 680 -429 1506 -956 2147 -1357 2168 -1357 53 0 65 158
+65 834 l0 561 -1428 893 c-785 491 -1440 901 -1457 911 l-30 18 -425 -269z"/>
+        </g>
+      </svg>
+      <span>AMPLIFY</span>
+    </a>
+
+    <nav class="navbar__links" aria-label="Navegación principal">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#testimonios">Testimonios</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <button class="theme-toggle" data-theme-toggle type="button" aria-pressed="false" aria-label="Cambiar entre modo claro y oscuro">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.2A8.4 8.4 0 119.8 4a6.7 6.7 0 0010.2 10.2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+
+      <a class="btn btn--primary btn--sm" data-whatsapp-link href="#">
+        Iniciar un proyecto
+      </a>
+
+      <button class="menu-toggle" data-menu-toggle type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" aria-label="Presentación">
+    <div class="hero-visual" aria-hidden="true">
+      <canvas class="hero-visual__canvas" data-particles-canvas></canvas>
+      <div class="ambient-glow"></div>
+    </div>
+
+    <div class="container hero__content">
+      <svg class="hero__mark" viewBox="0 0 583 739" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g transform="translate(-1.073169,738.466123) scale(0.1,-0.1)" fill="currentColor">
+          <path d="M2877 7328 c-232 -328 -2068 -3313 -2477 -4028 -173 -303 -322 -598
+-360 -715 -31 -97 -32 -104 -27 -230 6 -145 12 -175 35 -175 33 0 634 375
+1382 862 l435 284 193 329 c418 716 719 1213 817 1351 45 62 48 64 65 49 49
+-45 255 -375 745 -1197 l309 -517 415 -269 c535 -347 1371 -883 1387 -889 15
+-6 29 142 29 302 0 96 -4 120 -29 190 -92 257 -344 694 -1164 2021 -928 1504
+-1663 2665 -1701 2688 -5 4 -30 -22 -54 -56z"/>
+          <path d="M2500 2988 c-613 -389 -2104 -1322 -2312 -1447 l-177 -106 0 -560 c0
+-516 7 -780 25 -849 l6 -26 64 35 c174 98 1221 763 2099 1334 390 254 715 459
+722 457 6 -3 313 -196 680 -429 1506 -956 2147 -1357 2168 -1357 53 0 65 158
+65 834 l0 561 -1428 893 c-785 491 -1440 901 -1457 911 l-30 18 -425 -269z"/>
+        </g>
+      </svg>
+
+      <h1 class="hero__title">
+        <span class="line"><span>Software que</span></span>
+        <span class="line"><span>amplifica tu negocio.</span></span>
+      </h1>
+
+      <p class="hero__subtitle">
+        Diseñamos y desarrollamos productos digitales con el rigor de un
+        estudio de ingeniería y el criterio de un estudio de diseño.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" data-whatsapp-link href="#">
+          Iniciar un proyecto
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="icon-shift"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--secondary" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll-cue">
+      <span>Desliza</span>
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </section>
+
+  <!-- ==================== NOSOTROS ==================== -->
+  <section class="section about" id="nosotros" aria-labelledby="about-title">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Nosotros</span>
+      </div>
+
+      <div class="about__grid">
+        <h2 class="about__statement" id="about-title" data-reveal>
+          No construimos páginas web. Construimos la primera impresión de
+          tu empresa.
+        </h2>
+
+        <div class="about__details" data-reveal-group>
+          <div class="about__detail">
+            <h4>Cómo pensamos</h4>
+            <p>
+              Cada decisión de diseño responde a una sola pregunta:
+              ¿esto estaría a la altura de una empresa tecnológica de
+              clase mundial? Si la respuesta es no, la descartamos.
+            </p>
+          </div>
+          <div class="about__detail">
+            <h4>Cómo trabajamos</h4>
+            <p>
+              Diseño e ingeniería avanzan juntos desde el primer día.
+              Ninguna interfaz se construye sin pensar en cómo se
+              sostiene el código que hay detrás.
+            </p>
+          </div>
+          <div class="about__detail">
+            <h4>Lo que nos obsesiona</h4>
+            <p>
+              El detalle que nadie pide pero todos notan: una transición
+              a tiempo, un espacio bien puesto, un contraste correcto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICIOS ==================== -->
+  <section class="section services" id="servicios" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow">Servicios</span>
+        <h2 id="services-title">Todo lo que necesita un producto digital serio</h2>
+      </div>
+
+      <div class="services__grid" data-reveal-group>
+        <article class="card service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M8 15l2.2-5.6a1 1 0 011.8-.1L14 15M9.2 12.5h4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Diseño de producto digital</h3>
+          <p>Interfaces pensadas desde la psicología del usuario hasta el último píxel. No decoramos pantallas: diseñamos decisiones.</p>
+          <div class="service-card__meta">Producto que se vende solo</div>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 8L4.5 12 9 16M15 8l4.5 4-4.5 4M13.5 6l-3 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Ingeniería de software</h3>
+          <p>Arquitecturas escalables, código mantenible y rendimiento medido, no supuesto. Construimos para durar años, no un sprint.</p>
+          <div class="service-card__meta">Base técnica sin reescrituras</div>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5l8 4.3-8 4.3-8-4.3 8-4.3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M4 12l8 4.3 8-4.3M4 15.7L12 20l8-4.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Sistemas de marca</h3>
+          <p>Identidades visuales con reglas claras: tipografía, color, movimiento y tono, coherentes en cada punto de contacto.</p>
+          <div class="service-card__meta">Reconocible sin el logotipo</div>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 8.7v6.6l5.5-3.3L10 8.7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Motion &amp; interacción</h3>
+          <p>Animación con propósito: cada transición explica algo, cada microinteracción confirma una acción.</p>
+          <div class="service-card__meta">Premium sin explicación</div>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 16a7.5 7.5 0 1115 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 16l3.2-4.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
+          </div>
+          <h3>Rendimiento y SEO técnico</h3>
+          <p>Core Web Vitals, accesibilidad WCAG y arquitectura semántica desde el primer commit, no como parche final.</p>
+          <div class="service-card__meta">Velocidad medible</div>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.5"/><path d="M15 9l-2 4.5-4.5 2 2-4.5L15 9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Estrategia de producto</h3>
+          <p>Antes de diseñar o programar, entendemos el problema real del negocio y del usuario que lo va a resolver.</p>
+          <div class="service-card__meta">Criterio, no intuición</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROYECTOS ==================== -->
+  <section class="section work" id="proyectos" aria-labelledby="work-title">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow">Proyectos</span>
+        <h2 id="work-title">Cada proyecto, documentado con el mismo rigor</h2>
+      </div>
+
+      <div class="work__grid" data-work-grid data-reveal>
+        <div class="empty-state" data-work-empty style="grid-column: 1 / -1;">
+          <div class="empty-state__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 8a2 2 0 012-2h4l2 2h6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Los primeros proyectos están en camino</h3>
+          <p>Estamos construyendo esta sección con el mismo cuidado que ponemos en el código de nuestros clientes. Mientras tanto, hablemos directamente sobre el tuyo.</p>
+          <a class="btn btn--secondary btn--sm" data-whatsapp-link href="#">Cuéntanos tu proyecto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIOS ==================== -->
+  <section class="section testimonials" id="testimonios" aria-labelledby="testimonials-title">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow">Testimonios</span>
+        <h2 id="testimonials-title">La opinión que más nos importa: la de quien ya trabajó con nosotros</h2>
+      </div>
+
+      <div class="testimonials__track" data-testimonials-track data-reveal>
+        <div class="empty-state" data-testimonials-empty style="grid-column: 1 / -1;">
+          <div class="empty-state__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 8h10M7 12h6M5 16.5V6a2 2 0 012-2h10a2 2 0 012 2v7a2 2 0 01-2 2H9l-4 3.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Todavía no hay testimonios publicados</h3>
+          <p>Preferimos no inventar opiniones. En cuanto nuestros primeros clientes compartan la suya, aparecerá aquí.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACTO ==================== -->
+  <section class="section contact" id="contacto" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="contact__panel" data-reveal>
+        <div class="contact__intro">
+          <span class="eyebrow">Contacto</span>
+          <h2 id="contact-title">Empecemos a construir</h2>
+          <p>Cuéntanos qué necesitas. Normalmente respondemos el mismo día.</p>
+
+          <div class="contact__channels">
+            <a class="btn btn--whatsapp" data-whatsapp-link href="#">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17.5L4.5 20 5.6 16A8 8 0 1112 20a8 8 0 01-5-1.7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 10.2c0 3 2.6 5.6 5.6 5.6.6 0 1-.5.9-1.1l-.2-1a.9.9 0 00-.9-.7l-1.2.2a4.6 4.6 0 01-2.6-2.6l.2-1.2a.9.9 0 00-.7-.9l-1-.2c-.6-.1-1.1.3-1.1.9z" fill="currentColor"/></svg>
+              Escríbenos por WhatsApp
+            </a>
+
+            <span class="contact__channel">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              hola@amplify.dev
+            </span>
+          </div>
+        </div>
+
+        <form class="contact__form" data-contact-form novalidate>
+          <div class="contact__form-row">
+            <div class="field">
+              <label for="field-name">Nombre</label>
+              <input type="text" id="field-name" name="name" placeholder="Tu nombre" required autocomplete="name">
+              <span class="field__message"></span>
+            </div>
+            <div class="field">
+              <label for="field-email">Correo</label>
+              <input type="email" id="field-email" name="email" placeholder="tu@correo.com" required autocomplete="email">
+              <span class="field__message"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="field-company">Empresa <span class="text-tertiary">(opcional)</span></label>
+            <input type="text" id="field-company" name="company" placeholder="Nombre de tu empresa" autocomplete="organization">
+            <span class="field__message"></span>
+          </div>
+
+          <div class="field">
+            <label for="field-message">Cuéntanos sobre tu proyecto</label>
+            <textarea id="field-message" name="message" placeholder="¿Qué te gustaría construir?" required></textarea>
+            <span class="field__message"></span>
+          </div>
+
+          <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+
+          <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <svg class="logo-mark" viewBox="0 0 583 739" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g transform="translate(-1.073169,738.466123) scale(0.1,-0.1)" fill="currentColor">
+            <path d="M2877 7328 c-232 -328 -2068 -3313 -2477 -4028 -173 -303 -322 -598
+-360 -715 -31 -97 -32 -104 -27 -230 6 -145 12 -175 35 -175 33 0 634 375
+1382 862 l435 284 193 329 c418 716 719 1213 817 1351 45 62 48 64 65 49 49
+-45 255 -375 745 -1197 l309 -517 415 -269 c535 -347 1371 -883 1387 -889 15
+-6 29 142 29 302 0 96 -4 120 -29 190 -92 257 -344 694 -1164 2021 -928 1504
+-1663 2665 -1701 2688 -5 4 -30 -22 -54 -56z"/>
+            <path d="M2500 2988 c-613 -389 -2104 -1322 -2312 -1447 l-177 -106 0 -560 c0
+-516 7 -780 25 -849 l6 -26 64 35 c174 98 1221 763 2099 1334 390 254 715 459
+722 457 6 -3 313 -196 680 -429 1506 -956 2147 -1357 2168 -1357 53 0 65 158
+65 834 l0 561 -1428 893 c-785 491 -1440 901 -1457 911 l-30 18 -425 -269z"/>
+          </g>
+        </svg>
+        <p>Estudio de diseño y desarrollo de software. Construimos productos digitales con el nivel de detalle de una marca que se toma en serio a sí misma.</p>
+      </div>
+
+      <div class="footer__col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#servicios">Diseño de producto</a></li>
+          <li><a href="#servicios">Ingeniería de software</a></li>
+          <li><a href="#servicios">Sistemas de marca</a></li>
+          <li><a href="#servicios">Motion &amp; interacción</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h5>Contacto</h5>
+        <ul>
+          <li><a href="mailto:hola@amplify.dev">hola@amplify.dev</a></li>
+          <li><a data-whatsapp-link href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <time data-current-year>2026</time> AMPLIFY. Todos los derechos reservados.</span>
+      <div class="footer__socials" data-social-links hidden></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== MODAL (preparado para detalle de proyectos futuros) ==================== -->
+<div class="modal-layer" data-project-modal aria-hidden="true">
+  <div class="modal-layer__scrim" data-modal-close></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Detalle del proyecto">
+    <button class="modal-panel__close" data-modal-close type="button" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <div data-modal-content></div>
+  </div>
+</div>
+
+<!-- ==================== SCRIPTS ==================== -->
+<!-- Lenis — scroll inercial. Si la red no está disponible, scroll.js degrada al scroll nativo. -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js" defer></script>
+
+<script src="assets/js/config/config.js"></script>
+<script src="assets/js/utils/dom.js"></script>
+<script src="assets/js/modules/theme.js"></script>
+<script src="assets/js/modules/loader.js"></script>
+<script src="assets/js/modules/navbar.js"></script>
+<script src="assets/js/modules/scroll.js"></script>
+<script src="assets/js/modules/reveal.js"></script>
+<script src="assets/js/modules/cursor.js"></script>
+<script src="assets/js/modules/particles.js"></script>
+<script src="assets/js/modules/hero.js"></script>
+<script src="assets/js/modules/forms.js"></script>
+<script src="assets/js/modules/footer.js"></script>
+<script src="assets/js/modules/portfolio.js"></script>
+<script src="assets/js/modules/testimonials.js"></script>
+<script src="assets/js/core/app.js"></script>
+</body>
+</html>

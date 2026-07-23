@@ -1,0 +1,115 @@
+/* ==========================================================================
+   INPUTS / FORMULARIO
+   ========================================================================== */
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.field label {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.95rem 1.1rem;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border-hairline);
+  color: var(--text-primary);
+  font-size: var(--fs-sm);
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 130px;
+  line-height: var(--lh-relaxed);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--text-tertiary);
+}
+
+.field input:hover,
+.field textarea:hover {
+  border-color: var(--border-strong);
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--accent-500);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.14);
+}
+
+.field.has-error input,
+.field.has-error textarea {
+  border-color: #e5484d;
+}
+
+.field.has-error .field__message {
+  color: #e5484d;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.field.is-success input,
+.field.is-success textarea {
+  border-color: var(--accent-icon);
+}
+
+.field__message {
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  opacity: 0;
+  transform: translateY(-3px);
+  transition: opacity var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+  min-height: 1em;
+}
+
+.field.has-error .field__message,
+.field .field__message:not(:empty) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  border: 1px solid var(--border-hairline);
+  background: var(--surface);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity var(--dur-base) var(--ease-soft), max-height var(--dur-base) var(--ease-soft), margin var(--dur-base) var(--ease-soft);
+}
+
+.form-status.is-visible {
+  opacity: 1;
+  max-height: 120px;
+  margin-top: var(--space-4);
+}
+
+.form-status--success {
+  border-color: rgba(var(--accent-rgb), 0.35);
+}
+
+.form-status--success svg {
+  color: var(--accent-icon);
+  flex-shrink: 0;
+}
