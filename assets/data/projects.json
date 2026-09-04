@@ -27,41 +27,30 @@
     },
     {
       "id": "nexus-trade",
-      "name": "Nexus Trade (Plataforma Principal)",
+      "name": "Nexus Trade",
       "client": "",
       "industry": "E-Commerce",
       "year": 2026,
       "duration": "",
       "coverImage": "assets/images/nexus-trade.png",
+      "images": [
+        "assets/images/nexus-trade.png",
+        "assets/images/nexus-vendor.png"
+      ],
       "gallery": [],
-      "description": "Plataforma de comercio electrónico para la compra y venta de productos con interfaz moderna y ágil.",
+      "description": "Plataforma de comercio electrónico con tienda para compradores y portal de gestión para vendedores, integrados en un mismo producto.",
       "goals": [],
       "problem": "",
       "process": "",
       "solution": "",
       "technologies": [],
       "results": [],
+      "links": [
+        { "label": "Tienda", "url": "https://nexus-trade-zeta.vercel.app/" },
+        { "label": "Portal Vendedor", "url": "https://nexus-trade-zeta.vercel.app/vendedor/" }
+      ],
       "url": "https://nexus-trade-zeta.vercel.app/",
       "status": "E-Commerce / Desarrollo Web"
-    },
-    {
-      "id": "nexus-trade-vendedor",
-      "name": "Nexus Trade - Portal de Vendedor",
-      "client": "",
-      "industry": "E-Commerce",
-      "year": 2026,
-      "duration": "",
-      "coverImage": "assets/images/nexus-vendor.png",
-      "gallery": [],
-      "description": "Panel administrativo para la gestión de productos, inventario y métricas de ventas para comerciantes.",
-      "goals": [],
-      "problem": "",
-      "process": "",
-      "solution": "",
-      "technologies": [],
-      "results": [],
-      "url": "https://nexus-trade-zeta.vercel.app/vendedor/",
-      "status": "Dashboard / Panel de Control"
     }
   ]
 }
