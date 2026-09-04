@@ -221,6 +221,20 @@
   transform: translateY(-2px);
 }
 
+/* ---- Hover de marca: borde + resplandor neón verde + elevación ---- */
+.work-card {
+  transition:
+    transform 0.3s var(--ease-soft),
+    border-color 0.3s var(--ease-soft),
+    box-shadow 0.3s var(--ease-soft);
+}
+
+.work-card:hover {
+  border-color: var(--accent-500);
+  box-shadow: 0 0 25px rgba(var(--accent-rgb), 0.3);
+  transform: translateY(-5px);
+}
+
 /* ---- Estado vacío — no simula contenido falso ---- */
 .empty-state {
   display: flex;
