@@ -68,14 +68,157 @@
   border-top: 1px solid var(--border-hairline);
 }
 
-/* ---- Portafolio (grid preparado, vacío intencionalmente) ---- */
+/* ---- Portafolio ---- */
 .work-card {
-  aspect-ratio: 4 / 3;
+  position: relative;
+  aspect-ratio: 3 / 4;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: var(--space-5);
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  /* Respaldo si la imagen no carga: queda el fondo oscuro de la tarjeta */
+  background-color: var(--bg-2);
+}
+
+/* Capa de imagen: separada del contenido para poder difuminarla/enfocarla
+   sin afectar al texto. --work-card-bg lo define portfolio.js por tarjeta. */
+.work-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--work-card-bg, none);
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.06); /* oculta el borde difuso del blur */
+  filter: blur(3px) brightness(0.85) saturate(0.9);
+  transition: filter var(--dur-slow) var(--ease-soft), transform var(--dur-slow) var(--ease-soft);
+  z-index: 0;
+}
+
+/* Degradado oscuro para que título y descripción siempre sean legibles,
+   sin importar cuán clara sea la imagen de fondo. */
+.work-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.55) 55%, rgba(0, 0, 0, 0.92) 100%);
+  z-index: 1;
+}
+
+.work-card:hover::before,
+.work-card:focus-visible::before {
+  filter: blur(0) brightness(1.05) saturate(1);
+  transform: scale(1.1);
+}
+
+.work-card__meta,
+.work-card h3,
+.work-card p {
+  position: relative;
+  z-index: 2;
+}
+
+.work-card h3 {
+  margin-top: var(--space-3);
+}
+
+.work-card p {
+  margin-top: var(--space-2);
+}
+
+/* ---- Portafolio: variante con dos accesos (ej. tienda + panel admin) ----
+   El fondo se divide 50/50, una imagen por acceso. Cada mitad se enfoca
+   (pierde el blur) al pasar el mouse sobre su botón correspondiente. */
+.work-card--duo::before,
+.work-card--duo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.08);
+  filter: blur(3px) brightness(0.85) saturate(0.9);
+  transition: filter var(--dur-slow) var(--ease-soft), transform var(--dur-slow) var(--ease-soft);
+  z-index: 0;
+}
+
+.work-card--duo::before {
+  left: 0;
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.55) 55%, rgba(0, 0, 0, 0.92) 100%),
+    var(--work-card-bg-a, none);
+}
+
+.work-card--duo::after {
+  left: 50%;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.55) 55%, rgba(0, 0, 0, 0.92) 100%),
+    var(--work-card-bg-b, none);
+}
+
+/* Enfoque suave general al pasar el mouse por la tarjeta (fallback para
+   navegadores sin soporte de :has()). */
+.work-card--duo:hover::before,
+.work-card--duo:hover::after {
+  filter: blur(1.5px) brightness(0.95) saturate(1);
+}
+
+/* Enfoque específico: cada mitad se aclara solo cuando se pasa el mouse
+   sobre SU botón, para que el usuario asocie imagen ↔ acceso. */
+.work-card--duo:has(.work-card__link[data-work-slot='a']:hover)::before,
+.work-card--duo:has(.work-card__link[data-work-slot='a']:focus-visible)::before {
+  filter: blur(0) brightness(1.05) saturate(1);
+  transform: scale(1.12);
+}
+
+.work-card--duo:has(.work-card__link[data-work-slot='b']:hover)::after,
+.work-card--duo:has(.work-card__link[data-work-slot='b']:focus-visible)::after {
+  filter: blur(0) brightness(1.05) saturate(1);
+  transform: scale(1.12);
+}
+
+.work-card__links {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.work-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--text-primary);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  transition:
+    background var(--dur-base) var(--ease-soft),
+    border-color var(--dur-base) var(--ease-soft),
+    transform var(--dur-base) var(--ease-soft);
+}
+
+.work-card__link:hover,
+.work-card__link:focus-visible {
+  background: rgba(var(--accent-rgb), 0.85);
+  border-color: rgba(var(--accent-rgb), 0.85);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 /* ---- Estado vacío — no simula contenido falso ---- */
