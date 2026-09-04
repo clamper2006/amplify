@@ -5,5 +5,63 @@
     "coverImage", "gallery", "description", "goals", "problem",
     "process", "solution", "technologies", "results", "url", "status"
   ],
-  "items": []
+  "items": [
+    {
+      "id": "keyshield",
+      "name": "KeyShield",
+      "client": "",
+      "industry": "Ciberseguridad",
+      "year": 2026,
+      "duration": "",
+      "coverImage": "assets/images/keyshield.png",
+      "gallery": [],
+      "description": "Plataforma enfocada en la gestión segura de autenticación, llaves y protección de credenciales.",
+      "goals": [],
+      "problem": "",
+      "process": "",
+      "solution": "",
+      "technologies": [],
+      "results": [],
+      "url": "https://keyshield2.onrender.com/",
+      "status": "Web App / Ciberseguridad"
+    },
+    {
+      "id": "nexus-trade",
+      "name": "Nexus Trade (Plataforma Principal)",
+      "client": "",
+      "industry": "E-Commerce",
+      "year": 2026,
+      "duration": "",
+      "coverImage": "assets/images/nexus-trade.png",
+      "gallery": [],
+      "description": "Plataforma de comercio electrónico para la compra y venta de productos con interfaz moderna y ágil.",
+      "goals": [],
+      "problem": "",
+      "process": "",
+      "solution": "",
+      "technologies": [],
+      "results": [],
+      "url": "https://nexus-trade-zeta.vercel.app/",
+      "status": "E-Commerce / Desarrollo Web"
+    },
+    {
+      "id": "nexus-trade-vendedor",
+      "name": "Nexus Trade - Portal de Vendedor",
+      "client": "",
+      "industry": "E-Commerce",
+      "year": 2026,
+      "duration": "",
+      "coverImage": "assets/images/nexus-vendor.png",
+      "gallery": [],
+      "description": "Panel administrativo para la gestión de productos, inventario y métricas de ventas para comerciantes.",
+      "goals": [],
+      "problem": "",
+      "process": "",
+      "solution": "",
+      "technologies": [],
+      "results": [],
+      "url": "https://nexus-trade-zeta.vercel.app/vendedor/",
+      "status": "Dashboard / Panel de Control"
+    }
+  ]
 }
